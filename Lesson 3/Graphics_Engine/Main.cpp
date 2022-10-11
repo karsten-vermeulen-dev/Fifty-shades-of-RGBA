@@ -2,6 +2,7 @@
 #include <gl/GL.h>
 
 #include <iostream>
+#include <math.h>
 #include <SDL.h>
 
 bool isAppRunning{ true };
@@ -54,22 +55,26 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
+	static auto number{ 0.0f };
+
 	while (isAppRunning)
 	{
+		number += 0.01f;
+
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glBegin(GL_QUADS);
 
-		glColor3f(1.0f, 1.0f, 0.0f);
+		glColor3f(1.0f, std::sin(std::abs(number)), 0.0f);
 		glVertex3f(-0.5f, 0.5f, 0.0f);
 
-		glColor3f(1.0f, 0.0f, 0.0f);
+		glColor3f(std::cos(std::abs(number)), 0.0f, 0.0f);
 		glVertex3f(0.5f, 0.5f, 0.0f);
 
-		glColor3f(0.0f, 1.0f, 0.0f);
+		glColor3f(0.0f, std::sin(std::abs(number)), 0.0f);
 		glVertex3f(0.5f, -0.5f, 0.0f);
 
-		glColor3f(0.0f, 0.0f, 1.0f);
+		glColor3f(0.0f, 0.0f, std::cos(std::abs(number)));
 		glVertex3f(-0.5f, -0.5f, 0.0f);
 
 		glEnd();
