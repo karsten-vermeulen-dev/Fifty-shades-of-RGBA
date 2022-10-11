@@ -79,6 +79,118 @@ int main(int argc, char* argv[])
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		SDL_Event events;
+
+		while (SDL_PollEvent(&events))
+		{
+			switch (events.type)
+			{
+
+			case SDL_QUIT:
+			{
+				isAppRunning = false;
+				break;
+			}
+
+			case SDL_KEYDOWN:
+			{
+				char key = events.key.keysym.sym;
+				std::cout << "The " << key << " was pressed" << std::endl;
+				break;
+			}
+
+			case SDL_KEYUP:
+			{
+				char key = events.key.keysym.sym;
+				std::cout << "The " << key << " was released" << std::endl;
+				break;
+			}
+
+			case SDL_MOUSEBUTTONDOWN:
+			{
+				switch (events.button.button)
+				{
+
+				case SDL_BUTTON_LEFT:
+				{
+					std::cout << "Left mouse button was clicked." << std::endl;
+					break;
+				}
+
+				case SDL_BUTTON_RIGHT:
+				{
+					std::cout << "Right mouse button was clicked." << std::endl;
+					break;
+				}
+
+				case SDL_BUTTON_MIDDLE:
+				{
+					std::cout << "Middle mouse button was clicked." << std::endl;
+					break;
+				}
+				}
+
+				break;
+			}
+
+			case SDL_MOUSEBUTTONUP:
+			{
+				switch (events.button.button)
+				{
+
+				case SDL_BUTTON_LEFT:
+				{
+					std::cout << "Left mouse button was released." << std::endl;
+					break;
+				}
+
+				case SDL_BUTTON_RIGHT:
+				{
+					std::cout << "Right mouse button was released." << std::endl;
+					break;
+				}
+
+				case SDL_BUTTON_MIDDLE:
+				{
+					std::cout << "Middle mouse button was released." << std::endl;
+					break;
+				}
+				}
+
+				break;
+			}
+
+			case SDL_MOUSEMOTION:
+			{
+				auto mouseMotionX = events.motion.xrel;
+				auto mouseMotionY = events.motion.yrel;
+
+				auto mousePositionX = events.motion.x;
+				auto mousePositionY = events.motion.y;
+
+				auto mousePositionXNDC = mousePositionX / 1280.0f * 2.0f - 1.0f;
+				auto mousePositionYNDC = mousePositionY / 720.0f * 2.0f - 1.0f;
+
+				position.x = mousePositionXNDC;
+				position.y = -mousePositionYNDC;
+
+				break;
+			}
+
+			case SDL_MOUSEWHEEL:
+			{
+				auto wheelMotion = events.wheel.y;
+				std::cout << wheelMotion << std::endl;
+
+				scale.x += wheelMotion * 0.01f;
+				scale.y += wheelMotion * 0.01f;
+
+				break;
+			}
+
+			}
+		}
+
 		glBegin(GL_QUADS);
 
 		glColor3f(1.0f, std::sin(std::abs(number)), 0.0f);
