@@ -9,6 +9,22 @@ bool isAppRunning{ true };
 SDL_Window* window{ nullptr };
 SDL_GLContext context{ nullptr };
 
+struct Vector2D
+{
+	float x = 0.0f;
+	float y = 0.0f;
+};
+
+struct Vector3D
+{
+	float x = 0.0f;
+	float y = 0.0f;
+	float z = 0.0f;
+};
+
+Vector2D scale { 0.1f, 0.1f };
+Vector3D position { 0.0f, 0.0f, 0.0f };
+
 int main(int argc, char* argv[])
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
@@ -66,16 +82,16 @@ int main(int argc, char* argv[])
 		glBegin(GL_QUADS);
 
 		glColor3f(1.0f, std::sin(std::abs(number)), 0.0f);
-		glVertex3f(-0.5f, 0.5f, 0.0f);
+		glVertex3f(position.x - scale.x, position.y + scale.y, position.z + 0.0f);
 
 		glColor3f(std::cos(std::abs(number)), 0.0f, 0.0f);
-		glVertex3f(0.5f, 0.5f, 0.0f);
+		glVertex3f(position.x + scale.x, position.y + scale.y, position.z + 0.0f);
 
 		glColor3f(0.0f, std::sin(std::abs(number)), 0.0f);
-		glVertex3f(0.5f, -0.5f, 0.0f);
+		glVertex3f(position.x + scale.x, position.y - scale.y, position.z + 0.0f);
 
 		glColor3f(0.0f, 0.0f, std::cos(std::abs(number)));
-		glVertex3f(-0.5f, -0.5f, 0.0f);
+		glVertex3f(position.x - scale.x, position.y - scale.y, position.z + 0.0f);
 
 		glEnd();
 
