@@ -110,7 +110,6 @@ int main(int argc, char* argv[])
 			{
 				switch (events.button.button)
 				{
-
 				case SDL_BUTTON_LEFT:
 				{
 					std::cout << "Left mouse button was clicked." << std::endl;
@@ -137,7 +136,6 @@ int main(int argc, char* argv[])
 			{
 				switch (events.button.button)
 				{
-
 				case SDL_BUTTON_LEFT:
 				{
 					std::cout << "Left mouse button was released." << std::endl;
@@ -187,7 +185,6 @@ int main(int argc, char* argv[])
 
 				break;
 			}
-
 			}
 		}
 
