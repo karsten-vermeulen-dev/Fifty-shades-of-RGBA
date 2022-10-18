@@ -9,7 +9,7 @@ public:
 	static Screen* Instance();
 
 	bool Initialize();
-	void Clear();
+	void Refresh();
 	void Present();
 	void Shutdown();
 

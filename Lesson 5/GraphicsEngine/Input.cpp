@@ -6,69 +6,62 @@ Input* Input::Instance()
 	return input;
 }
 
-bool Input::IsXClicked()
+bool Input::IsXClicked() const
 {
 	return isXClicked;
 }
 
-bool Input::IsKeyPressed()
+bool Input::IsKeyPressed() const
 {
 	return isKeyPressed;
 }
 
-char Input::GetKeyUp()
+char Input::GetKeyUp() const
 {
 	return keyUp;
 }
 
-char Input::GetKeyDown()
+char Input::GetKeyDown() const
 {
 	return keyDown;
 }
 
-bool Input::IsLeftButtonClicked()
+bool Input::IsLeftButtonClicked() const
 {
 	return isLeftButtonClicked;
 }
 
-bool Input::IsRightButtonClicked()
+bool Input::IsRightButtonClicked() const
 {
 	return isRightButtonClicked;
 }
 
-bool Input::IsMiddleButtonClicked()
+bool Input::IsMiddleButtonClicked() const
 {
 	return isMiddleButtonClicked;
 }
 
-int Input::GetMousePositionX()
+int Input::GetMouseWheelMotion() const
 {
-	return mousePositionX;
+	return mouseWheelMotion;
 }
 
-int Input::GetMousePositionY()
+const SDL_Point& Input::GetMouseMotion() const
 {
-	return mousePositionY;
+	return mouseMotion;
 }
 
-int Input::GetMouseMotionX()
+const SDL_Point& Input::GetMousePosition() const
 {
-	return mouseMotionX;
-}
-
-int Input::GetMouseMotionY()
-{
-	return mouseMotionY;
+	return mousePosition;
 }
 
 void Input::Update()
 {
 	SDL_Event events;
 
-	mouseMotionX = 0;
-	mouseMotionY = 0;
-	mousePositionX = 0;
-	mousePositionY = 0;
+	mouseMotion = { 0, 0 };
+	mouseWheelMotion = 0;
 
 	while (SDL_PollEvent(&events))
 	{
@@ -148,11 +141,19 @@ void Input::Update()
 
 		case SDL_MOUSEMOTION:
 		{
-			mouseMotionX = events.motion.xrel;
-			mouseMotionY = events.motion.yrel;
+			mouseMotion.x = events.motion.xrel;
+			mouseMotion.y = events.motion.yrel;
 
-			mousePositionX = events.motion.x;
-			mousePositionY = events.motion.y;
+			mousePosition.x = events.motion.x;
+			mousePosition.y = events.motion.y;
+
+			break;
+		}
+
+		case SDL_MOUSEWHEEL:
+		{
+			mouseWheelMotion = events.wheel.y;
+			break;
 		}
 		}
 	}

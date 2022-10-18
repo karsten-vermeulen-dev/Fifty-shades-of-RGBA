@@ -13,7 +13,7 @@ bool Screen::Initialize()
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 	{
-		std::cout << "Error initializing SDL" << std::endl;
+		std::cout << "Error initializing SDL." << std::endl;
 		return false;
 	}
 
@@ -25,21 +25,21 @@ bool Screen::Initialize()
 
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
-	//SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
 
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 6);
 
 	window = SDL_CreateWindow("Graphics Engine",
-							  SDL_WINDOWPOS_UNDEFINED,
-							  SDL_WINDOWPOS_UNDEFINED,
-							  1280, 720, SDL_WINDOW_OPENGL);
+		SDL_WINDOWPOS_CENTERED,
+		SDL_WINDOWPOS_CENTERED,
+		1280,
+		720,
+		SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 
 	if (!window)
 	{
-		std::cout << "Error creating SDL window" << std::endl;
+		std::cout << "Error creating SDL window." << std::endl;
 		return false;
 	}
 
@@ -47,14 +47,15 @@ bool Screen::Initialize()
 
 	if (!context)
 	{
-		std::cout << "Error creating OpenGL context." << std::endl;
+		std::cout << "Error creating OpenGL context. "
+			"The context is either invalid or not supported by your graphics card" << std::endl;
 		return false;
 	}
 
 	return true;
 }
 
-void Screen::Clear()
+void Screen::Refresh()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 }

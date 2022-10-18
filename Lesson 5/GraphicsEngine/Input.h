@@ -8,21 +8,19 @@ public:
 
 	static Input* Instance();
 
-	bool IsXClicked();
-	bool IsKeyPressed();
+	bool IsXClicked() const;
+	bool IsKeyPressed() const;
 
-	char GetKeyUp();
-	char GetKeyDown();
+	char GetKeyUp() const;
+	char GetKeyDown() const;
 
-	bool IsLeftButtonClicked();
-	bool IsRightButtonClicked();
-	bool IsMiddleButtonClicked();
+	bool IsLeftButtonClicked() const;
+	bool IsRightButtonClicked() const;
+	bool IsMiddleButtonClicked() const;
 
-	int GetMousePositionX();
-	int GetMousePositionY();
-
-	int GetMouseMotionX();
-	int GetMouseMotionY();
+	int GetMouseWheelMotion() const;
+	const SDL_Point& GetMouseMotion() const;
+	const SDL_Point& GetMousePosition() const;
 
 	void Update();
 
@@ -42,10 +40,8 @@ private:
 	bool isRightButtonClicked{ false };
 	bool isMiddleButtonClicked{ false };
 
-	int mouseMotionX{ 0 };
-	int mouseMotionY{ 0 };
-
-	int mousePositionX{ 0 };
-	int mousePositionY{ 0 };
+	int mouseWheelMotion{ 0 };
+	SDL_Point mouseMotion{ 0, 0 };
+	SDL_Point mousePosition{ 0, 0 };
 
 };
