@@ -27,7 +27,11 @@ Vector3D position{ 0.0f, 0.0f, 0.0f };
 
 int main(int argc, char* argv[])
 {
-	Screen::Instance()->Initialize();
+	if (!Screen::Instance()->Initialize(1280, 720, 4.6f))
+	{
+		return 0;
+	}
+
 	Screen::Instance()->SetColor(0.15f, 0.15f, 0.15f);
 
 	static auto number{ 0.0f };

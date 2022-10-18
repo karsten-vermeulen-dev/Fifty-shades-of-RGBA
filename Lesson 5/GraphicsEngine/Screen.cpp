@@ -14,7 +14,7 @@ void Screen::SetColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a)
 	glClearColor(r, g, b, a);
 }
 
-bool Screen::Initialize()
+bool Screen::Initialize(int width, int height, float version)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 	{
@@ -32,14 +32,18 @@ bool Screen::Initialize()
 
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
 
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 6);
+	version *= 10.0f;
+	auto major = int(version) / 10;
+	auto minor = int(version) % 10;
+
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, major);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, minor);
 
 	window = SDL_CreateWindow("Graphics Engine",
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,
-		1280,
-		720,
+		width,
+		height,
 		SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 
 	if (!window)

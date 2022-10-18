@@ -13,7 +13,7 @@ public:
 		GLfloat b = 0.0f,
 		GLfloat a = 1.0f);
 
-	bool Initialize();
+	bool Initialize(int width, int height, float version);
 	void Refresh();
 	void Present();
 	void Shutdown();
