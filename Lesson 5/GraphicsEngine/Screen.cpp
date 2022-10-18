@@ -9,6 +9,11 @@ Screen* Screen::Instance()
 	return screen;
 }
 
+void Screen::SetColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a)
+{
+	glClearColor(r, g, b, a);
+}
+
 bool Screen::Initialize()
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
