@@ -49,6 +49,29 @@ int main(int argc, char* argv[])
 			isAppRunning = false;
 		}
 
+		if (Input::Instance()->IsKeyPressed())
+		{
+			if (Input::Instance()->GetKeyDown() == 'a')
+			{
+				position.x -= 0.01f;
+			}
+
+			else if (Input::Instance()->GetKeyDown() == 'd')
+			{
+				position.x += 0.01f;
+			}
+
+			else if (Input::Instance()->GetKeyDown() == 'w')
+			{
+				position.y += 0.01f;
+			}
+
+			else if (Input::Instance()->GetKeyDown() == 's')
+			{
+				position.y -= 0.01f;
+			}
+		}
+
 		glBegin(GL_QUADS);
 
 		glColor3f(1.0f, 0.5f, 0.0f);
