@@ -33,6 +33,7 @@ int main(int argc, char* argv[])
 	}
 
 	Screen::Instance()->SetColor(0.15f, 0.15f, 0.15f);
+	//Screen::Instance()->SetColor(244U, 23U, 156U);
 
 	static auto number{ 0.0f };
 

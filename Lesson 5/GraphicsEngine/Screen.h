@@ -13,6 +13,11 @@ public:
 		GLfloat b = 0.0f,
 		GLfloat a = 1.0f);
 
+	void SetColor(GLuint r = 0,
+		GLuint g = 0,
+		GLuint b = 0,
+		GLuint a = 1);
+
 	bool Initialize(int width, int height, float version);
 	void Refresh();
 	void Present();

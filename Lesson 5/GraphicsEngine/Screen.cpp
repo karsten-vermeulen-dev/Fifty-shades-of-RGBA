@@ -14,6 +14,11 @@ void Screen::SetColor(GLfloat r, GLfloat g, GLfloat b, GLfloat a)
 	glClearColor(r, g, b, a);
 }
 
+void Screen::SetColor(GLuint r, GLuint g, GLuint b, GLuint a)
+{
+	glClearColor(r / 255.0f, g / 255.0f, b / 255.0f, a);
+}
+
 bool Screen::Initialize(int width, int height, float version)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
