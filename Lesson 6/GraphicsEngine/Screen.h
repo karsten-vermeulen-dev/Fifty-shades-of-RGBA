@@ -18,7 +18,7 @@ public:
 		GLuint b = 0,
 		GLuint a = 1);
 
-	bool Initialize(int width, int height, float version);
+	bool Initialize(int width, int height, float version, bool isCore = false);
 	void Refresh();
 	void Present();
 	void Shutdown();

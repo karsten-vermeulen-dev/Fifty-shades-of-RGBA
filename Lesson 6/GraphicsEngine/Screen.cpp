@@ -19,7 +19,7 @@ void Screen::SetColor(GLuint r, GLuint g, GLuint b, GLuint a)
 	glClearColor(r / 255.0f, g / 255.0f, b / 255.0f, a);
 }
 
-bool Screen::Initialize(int width, int height, float version)
+bool Screen::Initialize(int width, int height, float version, bool isCore)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 	{
@@ -36,7 +36,15 @@ bool Screen::Initialize(int width, int height, float version)
 
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
+	if (isCore)
+	{
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+	}
+
+	else
+	{
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
+	}
 
 	version *= 10.0f;
 	auto major = int(version) / 10;
