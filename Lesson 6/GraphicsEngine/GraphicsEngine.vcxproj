@@ -151,12 +151,14 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gl.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="khrplatform.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="Utility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
