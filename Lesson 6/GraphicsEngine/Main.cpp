@@ -6,27 +6,17 @@
 
 #include "Input.h"
 #include "Screen.h"
+#include "Utility.h"
 
 bool isAppRunning{ true };
 
-struct Vector2D
-{
-	float x = 0.0f;
-	float y = 0.0f;
-};
-
-struct Vector3D
-{
-	float x = 0.0f;
-	float y = 0.0f;
-	float z = 0.0f;
-};
-
-Vector2D scale{ 0.5f, 0.5f };
-Vector3D position{ 0.0f, 0.0f, 0.0f };
+Utility::Vector2D scale{ 0.5f, 0.5f };
+Utility::Vector3D position{ 0.0f, 0.0f, 0.0f };
 
 int main(int argc, char* argv[])
 {
+	Utility::Initialize();
+	
 	if (!Screen::Instance()->Initialize(1280, 720, 4.6f))
 	{
 		return 0;
@@ -35,6 +25,8 @@ int main(int argc, char* argv[])
 	Screen::Instance()->SetColor(0.15f, 0.15f, 0.15f);
 
 	static auto number{ 0.0f };
+
+	Utility::DisplayGraphicsProfile();
 
 	while (isAppRunning)
 	{
