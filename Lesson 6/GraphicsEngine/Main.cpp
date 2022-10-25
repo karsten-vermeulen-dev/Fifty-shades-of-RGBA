@@ -112,3 +112,106 @@ int main(int argc, char* argv[])
 	Screen::Instance()->Shutdown();
 	return 0;
 }
+
+//OLD CODE - WIP
+////********************************
+//	//display graphics card profile
+//	//********************************
+//
+//	//display the manufacturer of the graphics hardware 
+//std::cout << (const char*)(glGetString(GL_VENDOR)) << std::endl;
+//
+////display the make and model of the graphics card 
+//std::cout << (const char*)(glGetString(GL_RENDERER)) << std::endl;
+//
+////display the current OpenGL version and mode set 
+//std::cout << (const char*)(glGetString(GL_VERSION)) << std::endl;
+//
+////**********************************
+////set up extensions manually
+////**********************************
+//
+////create pointer to function
+//PFNGLGETSTRINGIPROC glGetStringi = nullptr;
+//
+////assign address of function to pointer using Windows platform-specific function
+//glGetStringi = (PFNGLGETSTRINGIPROC)wglGetProcAddress("glGetStringi");
+//
+////check for errors otherwise go ahead and use the extension function
+//if (glGetStringi == nullptr)
+//{
+//	std::cout << "Extension function not supported by your graphics card." << std::endl;
+//}
+//
+//else
+//{
+//
+//	//get total number of extensions supported by our graphics card
+//	GLint totalExtensions;
+//	glGetIntegerv(GL_NUM_EXTENSIONS, &totalExtensions);
+//
+//	//loop through all extensions and display them
+//	for (GLint i = 0; i < totalExtensions; i++)
+//	{
+//		std::cout << "Extension #" << i + 1 << ": "
+//			<< (const char*)glGetStringi(GL_EXTENSIONS, i) << std::endl;
+//	}
+//
+//}
+//
+////try load a function exclusive ONLY to the OpenGL 4.5 context 
+////on some older cards, this might not work and so we only use
+////the function if it's supported and display an error if not
+//
+//PFNGLBINDTEXTUREUNITPROC glBindTexUnit = nullptr;
+//glBindTexUnit = (PFNGLBINDTEXTUREUNITPROC)wglGetProcAddress("glBindTextureUnit");
+//
+//if (glBindTexUnit)
+//{
+//	glBindTexUnit(0, 0);
+//}
+//
+//else
+//{
+//	std::cout << "Your graphics card is too old!" << std::endl;
+//}
+
+//=======================================================================
+
+////**********************************
+//	//set up extensions using GLAD
+//	//**********************************
+//
+//if (!gladLoadGL())
+//{
+//	std::cout << "Failed to initialize GLAD" << std::endl;
+//	system("pause");
+//	return 0;
+//}
+//
+////get total number of extensions supported by our graphics card
+//GLint totalExtensions;
+//glGetIntegerv(GL_NUM_EXTENSIONS, &totalExtensions);
+//
+////loop through all extensions and display them
+//for (GLint i = 0; i < totalExtensions; i++)
+//{
+//	std::cout << "Extension #" << i + 1 << ": "
+//		<< (const char*)glGetStringi(GL_EXTENSIONS, i) << std::endl;
+//}
+//
+////********************************
+////display graphics card profile
+////********************************
+//
+////display the manufacturer of the graphics hardware 
+//std::cout << (const char*)(glGetString(GL_VENDOR)) << std::endl;
+//
+////display the make and model of the graphics card 
+//std::cout << (const char*)(glGetString(GL_RENDERER)) << std::endl;
+//
+////display the current OpenGL version and mode set 
+//std::cout << (const char*)(glGetString(GL_VERSION)) << std::endl;
+//
+////display which GLSL version is supported by the graphics card
+//std::cout << (const char*)(glGetString(GL_SHADING_LANGUAGE_VERSION)) << std::endl;
