@@ -1,7 +1,7 @@
-#include <Windows.h>
-#include <gl/GL.h>
+#include "gl.h"
 #include <iostream>
 #include "Screen.h"
+#include "Utility.h"
 
 Screen* Screen::Instance()
 {
@@ -23,7 +23,7 @@ bool Screen::Initialize(int width, int height, float version, bool isCore)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 	{
-		std::cout << "Error initializing SDL." << std::endl;
+		Utility::Log("Error initializing SDL.", Utility::Severity::Failure);
 		system("pause");
 		return false;
 	}
@@ -62,7 +62,7 @@ bool Screen::Initialize(int width, int height, float version, bool isCore)
 
 	if (!window)
 	{
-		std::cout << "Error creating SDL window." << std::endl;
+		Utility::Log("Error creating SDL window.", Utility::Severity::Failure);
 		system("pause");
 		return false;
 	}
@@ -71,12 +71,20 @@ bool Screen::Initialize(int width, int height, float version, bool isCore)
 
 	if (!context)
 	{
-		std::cout << "Error creating OpenGL context. "
-			"The context is either invalid or not supported by your graphics card." << std::endl;
+		Utility::Log("Error creating OpenGL context. "
+			"The context is either invalid or not supported by your graphics card.",
+			Utility::Severity::Failure);
 		system("pause");
 		return false;
 	}
 
+	if (!gladLoaderLoadGL())
+	{
+		Utility::Log("Error loading OpenGL extensions.", Utility::Severity::Failure);
+		return false;
+	}
+
+	Utility::Log("Application window created successfully.", Utility::Severity::Success);
 	return true;
 }
 
