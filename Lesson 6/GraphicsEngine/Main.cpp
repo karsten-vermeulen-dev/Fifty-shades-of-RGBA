@@ -80,6 +80,32 @@ int main(int argc, char* argv[])
 
 		glEnd();
 
+		static bool isErrorChecked = false;
+
+		if (!isErrorChecked)
+		{
+			////check if an error occurred and store its value
+			//GLenum errorValue = glGetError();
+
+			////if OpenGL legacy code executed without error no error will be flagged
+			//if (errorValue == GL_NO_ERROR)
+			//{
+			//	Utility::Log("Old fixed function code executed successfully.",
+			//		Utility::Severity::Success);
+			//}
+
+			////otherwise OpenGL will flag an invalid operation error
+			//else if (errorValue == GL_INVALID_OPERATION)
+			//{
+			//	Utility::Log("Old fixed function code could not run.",
+			//		Utility::Severity::Failure);
+			//}
+
+			Utility::CheckGLError();
+
+			isErrorChecked = true;
+		}
+
 		Screen::Instance()->Present();
 	}
 
