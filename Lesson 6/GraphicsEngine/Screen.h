@@ -18,6 +18,7 @@ public:
 		GLuint b = 0,
 		GLuint a = 1);
 
+	//TODO - Read parameters from a file
 	bool Initialize(int width, int height, float version, bool isCore = false);
 	void Refresh();
 	void Present();
