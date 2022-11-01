@@ -18,6 +18,8 @@ public:
 		GLuint b = 0,
 		GLuint a = 1);
 
+	//TODO - Add a parameter to input name for window
+	//Do this in future lessons as well
 	bool Initialize(int width, int height, float version);
 	void Refresh();
 	void Present();
