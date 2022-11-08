@@ -7,12 +7,11 @@
 
 #include "Input.h"
 #include "Screen.h"
+#include "Shader.h"
 #include "Utility.h"
 
+Shader shader;
 bool isAppRunning{ true };
-
-Utility::Vector2D scale{ 0.5f, 0.5f };
-Utility::Vector3D position{ 0.0f, 0.0f, 0.0f };
 
 int main(int argc, char* argv[])
 {
@@ -24,6 +23,10 @@ int main(int argc, char* argv[])
 	}
 
 	Screen::Instance()->SetColor(0.15f, 0.15f, 0.15f);
+
+	Shader::Initialize();
+
+	shader.Create("Shaders/Main.vert", "Shaders/Main.frag");
 
 	while (isAppRunning)
 	{
@@ -39,6 +42,10 @@ int main(int argc, char* argv[])
 		Screen::Instance()->Present();
 	}
 
+	shader.Destroy();
+
+	Shader::Shutdown();
 	Screen::Instance()->Shutdown();
+
 	return 0;
 }
