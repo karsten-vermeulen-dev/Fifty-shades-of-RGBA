@@ -94,6 +94,7 @@ bool Shader::LinkProgram()
 		GLchar error[1000];
 		GLsizei bufferSize = 1000;
 		glGetProgramInfoLog(programID, bufferSize, &bufferSize, error);
+		Utility::Log("Error linking shader program:", Utility::Severity::Failure);
 		Utility::Log(error, Utility::Severity::Failure);
 		return false;
 	}
@@ -138,9 +139,12 @@ bool Shader::CompileShaders(const std::string& filename)
 		GLchar error[1000];
 		GLsizei bufferSize = 1000;
 		glGetShaderInfoLog(shaderID, bufferSize, &bufferSize, error);
+		Utility::Log("Error compiling '" + filename + "':", Utility::Severity::Failure);
 		Utility::Log(error, Utility::Severity::Failure);
 		return false;
 	}
+
+	Utility::Log("'" + filename + "' compiled successfully.", Utility::Severity::Success);
 
 	return true;
 }
