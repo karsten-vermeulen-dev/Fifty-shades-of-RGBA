@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 {
 	Utility::Initialize();
 
-	if (!Screen::Instance()->Initialize(1280, 720, 4.6f))
+	if (!Screen::Instance()->Initialize(1280, 720, 4.6f, true))
 	{
 		return 0;
 	}
