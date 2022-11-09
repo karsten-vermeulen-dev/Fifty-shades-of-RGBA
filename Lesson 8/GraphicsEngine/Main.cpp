@@ -13,6 +13,8 @@
 Shader shader;
 bool isAppRunning{ true };
 
+GLuint VBO{ 0 };
+
 int main(int argc, char* argv[])
 {
 	Utility::Initialize();
@@ -28,6 +30,26 @@ int main(int argc, char* argv[])
 
 	shader.Create("Shaders/Main.vert", "Shaders/Main.frag");
 
+	GLfloat VBOData[] = { -0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,
+						   0.5f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
+						  -0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 1.0f,
+						  -0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 1.0f,
+						   0.5f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
+						   0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f };
+
+	auto vertexAttributeID = shader.GetAttributeID("vertexIn");
+	auto colorAttributeID = shader.GetAttributeID("colorIn");
+
+	glEnableVertexAttribArray(vertexAttributeID);
+	glEnableVertexAttribArray(colorAttributeID);
+
+	glGenBuffers(1, &VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(VBOData), VBOData, GL_STATIC_DRAW);
+
+	glVertexAttribPointer(vertexAttributeID, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), 0);
+	glVertexAttribPointer(colorAttributeID, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
+
 	while (isAppRunning)
 	{
 		Screen::Instance()->Refresh();
@@ -39,8 +61,14 @@ int main(int argc, char* argv[])
 			isAppRunning = false;
 		}
 
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+
 		Screen::Instance()->Present();
 	}
+
+	glDeleteBuffers(1, &VBO);
+	glDisableVertexAttribArray(colorAttributeID);
+	glDisableVertexAttribArray(vertexAttributeID);
 
 	shader.Destroy();
 
