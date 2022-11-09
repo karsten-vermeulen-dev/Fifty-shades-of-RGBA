@@ -1,6 +1,5 @@
 #include <iostream>
 #include <math.h>
-
 #include "Input.h"
 #include "Screen.h"
 #include "Shader.h"
