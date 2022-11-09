@@ -175,8 +175,18 @@ bool Shader::CompileShaders(const std::string& filename)
 	}
 
 	file.close();
-	
-	auto shaderID = (filename.find(".vert")) ? vertexShaderID : fragmentShaderID;
+
+	auto shaderID = 0;
+
+	if (filename.find(".vert") != std::string::npos)
+	{
+		shaderID = vertexShaderID;
+	}
+
+	else
+	{
+		shaderID = fragmentShaderID;
+	}
 
 	const GLchar* finalCode = reinterpret_cast<const GLchar*>(sourceCode.c_str());
 	glShaderSource(shaderID, 1, &finalCode, nullptr);
