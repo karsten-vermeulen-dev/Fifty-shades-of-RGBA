@@ -47,9 +47,6 @@ int main(int argc, char* argv[])
 	glEnableVertexAttribArray(vertexAttributeID);
 	glEnableVertexAttribArray(colorAttributeID);
 
-	auto time = 0.0f;
-	auto timeID = shader.GetUniformID("time");
-
 	while (isAppRunning)
 	{
 		Screen::Instance()->Refresh();
@@ -60,9 +57,6 @@ int main(int argc, char* argv[])
 		{
 			isAppRunning = false;
 		}
-
-		time += 0.01f;
-		shader.SendData("time", time);
 
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 
