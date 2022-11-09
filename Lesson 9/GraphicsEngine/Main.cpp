@@ -1,7 +1,3 @@
-//TODO - Remove these in Lesson 5 as well as here
-//#include <Windows.h>
-//#include <gl/GL.h>
-
 #include <iostream>
 #include <math.h>
 
