@@ -1,6 +1,11 @@
 #version 460
 
-void main()
+in vec3 vertexIn;
+in vec3 colorIn;
+out vec3 colorOut;
+
+void main(void)
 {
-	//TODO
+    colorOut = colorIn;
+    gl_Position = vec4(vertexIn, 1.0);
 }
