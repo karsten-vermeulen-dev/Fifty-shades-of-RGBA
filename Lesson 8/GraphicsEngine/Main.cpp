@@ -29,19 +29,17 @@ int main(int argc, char* argv[])
 	Shader::Initialize();
 
 	shader.Create("Shaders/Main.vert", "Shaders/Main.frag");
+	shader.Use();
 
-	GLfloat VBOData[] = { -0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,
-						   0.5f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
-						  -0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 1.0f,
-						  -0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 1.0f,
-						   0.5f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
-						   0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f };
+	GLfloat VBOData[] = { -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+						   0.5f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+						  -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 1.0f,
+						  -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 1.0f,
+						   0.5f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+						   0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f };
 
 	auto vertexAttributeID = shader.GetAttributeID("vertexIn");
 	auto colorAttributeID = shader.GetAttributeID("colorIn");
-
-	glEnableVertexAttribArray(vertexAttributeID);
-	glEnableVertexAttribArray(colorAttributeID);
 
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -50,6 +48,9 @@ int main(int argc, char* argv[])
 	glVertexAttribPointer(vertexAttributeID, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), 0);
 	glVertexAttribPointer(colorAttributeID, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
 
+	glEnableVertexAttribArray(vertexAttributeID);
+	glEnableVertexAttribArray(colorAttributeID);
+	
 	while (isAppRunning)
 	{
 		Screen::Instance()->Refresh();
