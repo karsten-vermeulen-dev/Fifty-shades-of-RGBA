@@ -7,6 +7,7 @@ class Utility
 
 public:
 
+	//TODO - Do we really need these beyond the first two lessons?
 	struct Vector2D
 	{
 		float x = 0.0f;
