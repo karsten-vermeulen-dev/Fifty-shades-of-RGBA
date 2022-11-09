@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
 
 	glEnableVertexAttribArray(vertexAttributeID);
 	glEnableVertexAttribArray(colorAttributeID);
-	
+
 	auto time = 0.0f;
 	auto timeID = shader.GetUniformID("time");
 
