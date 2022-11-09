@@ -27,6 +27,7 @@ int main(int argc, char* argv[])
 	Shader::Initialize();
 
 	shader.Create("Shaders/Main.vert", "Shaders/Main.frag");
+	shader.Use();
 
 	while (isAppRunning)
 	{
