@@ -1,5 +1,3 @@
-## Lesson 3 - Window to the 3D world
-
-## The first little graphics app
+## Lesson 4 - Gimme some input
 
 _Material coming soon..._
