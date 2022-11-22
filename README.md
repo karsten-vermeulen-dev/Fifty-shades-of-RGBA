@@ -13,7 +13,7 @@ _This will be a solid introduction to graphics and shaders, where you will learn
 
 ### Lesson 3 - Window to the 3D world
 
-_In this lesson, you will develop your first little graphics application by setting up SDL and a OpenGL rendering context_.
+_In this lesson, students will learn how to download and link the SDL library, which will aid them in creating and managing their application window. Students will add specific SDL code to their projects to create the main window as well as create the OpenGL rendering context. Finally, a main application loop will be added, wherein students will add some primitive OpenGL functions just to get a basic quad to render on screen_.
 
 ### Lesson 4 - Gimme some input
 
