@@ -1,7 +1,9 @@
-## Lesson 6 - _OpenGL_...opened up
+## Lesson 7 - The graphics pipeline
 
-## _OpenGL_ extensions
+## The magic of shaders
 
-So far, we have been rendering our quad using some very ancient _OpenGL_ render calls. What we ideally want to do is take _OpenGL_ and open it up to reveal its full potential. On _Windows_ alone, _OpenGL_ is pretty useless and feels more like a superhero not knowing their own abilities. Time to open the API up. Let's go! 
+Rendering in _OpenGL_ has drastically transformed and evolved over the years! As new technology emerges, the API constantly needs to keep up with latest demands and work in a more efficient manner. The newer programmable pipeline introduced shaders, which allows programmers more control over the graphics pipeline.
+This pipeline is essentially a sequence of steps executed to transform a 3D model in its raw form into a 2D object displayed on the player's game screen
+Previously, during the fixed-function era, all a programmer had was a set of pre-defined routines that manipulated the graphics pipeline automatically. This was less than ideal, and things needed to change. 
 
 _More material coming soon..._
