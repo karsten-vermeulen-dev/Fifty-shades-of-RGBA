@@ -17,7 +17,7 @@ _In this lesson, students will learn how to download and link the SDL library, w
 
 ### Lesson 4 - Gimme some input
 
-_Here, you are going to continue using SDL to allow the user to manage keyboard and mouse input_.
+_Here, students will learn how the input polling process works and how different input events are triggered and dealt with. They will gain insight into reading keyboard and mouse input_.
 
 ### Lesson 5 - Start your graphics engines!
 
