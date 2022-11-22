@@ -8,6 +8,6 @@ In this lesson, we will want to wrap all our previous code into a more manageabl
 
 Singletons are a commonly used, yet controversial design pattern. They ensure that only one instance of a class is instantiated, and that that instance is globally accessible by all components within a framework. Apart from them not being able to be created more than once, they also cannot be copied or assigned to other variables. Singletons are accessible only via a special pointer, and are used to represent manager or controller classes. 
 
-Many documents warn of Singleton abuse, because they are essentially global variables and they create dependencies, so beware of overusing them.
+💡 _Many documents warn of Singleton abuse, because they are essentially global variables and they create dependencies, so beware of overusing them_.
 
 _More material coming soon..._
