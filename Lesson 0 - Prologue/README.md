@@ -12,7 +12,6 @@ Shader programming is the modern way of rendering in game development and shader
 
 ### Some books that may help you
 
-<p align="left"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Into-the-deep-blue-C-/blob/main/Images/sams_c.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Into-the-deep-blue-C-/blob/main/Images/bs_c.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Into-the-deep-blue-C-/blob/main/Images/md_c.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Into-the-deep-blue-C-/blob/main/Images/savitch_c.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Into-the-deep-blue-C-/blob/main/Images/beginning_c.jpg"> </p> 
+<p align="left"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Fifty-shades-of-RGBA/blob/main/Images/opengl_2.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Fifty-shades-of-RGBA/blob/main/Images/opengl_1.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Fifty-shades-of-RGBA/blob/main/Images/opengl_3.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Fifty-shades-of-RGBA/blob/main/Images/math.jpg"> <img width="180" height="220" src="https://github.com/karsten-vermeulen-dev/Fifty-shades-of-RGBA/blob/main/Images/opengl_5.jpg"> </p> 
 
-So, what are you waiting for? Let’s dive right into the deep blue <i>C++</i>!
-
+So, what are you waiting for? Let's dive right in!
