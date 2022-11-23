@@ -1,4 +1,4 @@
-# 🆕Lesson coming soon!🆕
+# :fire:Lesson coming soon:fire:
 
-_🔥 Another great lesson with loads of information and source code will be here soon... 🔥_
+_Another great lesson with loads of information and source code will be here soon..._
 
