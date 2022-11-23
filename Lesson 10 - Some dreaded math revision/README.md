@@ -1,3 +1,4 @@
-# Lesson incoming
+# 🆕Lesson coming soon!🆕
 
-_Another great lesson with loads of information and source code will be here soon..._
+_🔥 Another great lesson with loads of information and source code will be here soon... 🔥_
+
