@@ -39,6 +39,8 @@ _Here, you will learn how to pass data to your shaders, in the form of uniforms,
 
 _Now, you will progress to creating multiple VBOs for your data, before learning all about Vertex Array Objects and Index Buffer Objects. Finally, you will add code to your newly created Shader class to further control data transfer between the OpenGL application and the shaders_.
 
+<hr>
+
 ### Lesson 10 - Some dreaded math revision
 
 _To prove that math need not be too intimidating, you will do a quick refresher on the mathematical topics that are essential for a graphics course. These topics include trigonometry and linear algebra, where you will further delve the rabbit hole to (re)discover things like vectors and matrices and recap on the three main transformations, namely translation, rotation and scale. Ending the lesson will be  an introduction to GLM, the math helper library designed to work alongside OpenGL._
@@ -55,6 +57,8 @@ _For part deux, you continue down the exciting road that is transformations by l
 
 _In this lesson, you will begin to create your own 3D game world and build a grid and coordinate system, so that you can better orientate yourself. Together with a working camera, some objects in the scene and the ability to switch between 2D and 3D, you should be well on your way to producing an exciting graphics tech demo._
 
+<hr>
+
 ### Lesson 14 - Adding some textures to the dish
 
 _With the time now ripe for textures to be added to your objects, in this lesson you will build a Texture class to handle the loading, unloading, storing and filtering of textures. You will learn all about UV coordinates and how you can pass this data, using VBOs, to the shader, as well as demonstrate how to use the textures in the shaders. 
@@ -67,6 +71,8 @@ _Stepping away from 3D for a short while, you will now delve a little into the w
 ### Lesson 16 - The writing's on the screen
 
 _Text rendering is equally important to know about, so today, you will cover how to create text on screen, by using bitmapped fonts before delving into the FreeType library. You will end off the lesson building a Text class to encapsulate all text rendering functionality._
+
+<hr>
 
 ### Lesson 17 - Let there be lights I
 
@@ -83,3 +89,8 @@ _With a plethora of lighting knowledge under your belt and a robust lighting sys
 ### Lesson 20 - Let there be more lights
 
 _Here, you conclude your lessons of lighting by learning how to create multiple lights, as well as different types of lighting such as spot, point and directional lights._
+
+### Lesson 21 - Setting the scene
+
+_In this lesson, you are going to learn all about the OBJ file format, from head to toe, before going on to build your own 3D model loader. Once that's done and dusted, you will use this new tool to load some 3D models and begin setting up your 3D scene._
+
