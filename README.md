@@ -38,3 +38,16 @@ _Here, you will learn how to pass data to your shaders, in the form of uniforms,
 ### Lesson 9 - Sending data down the pipeline II
 
 _Now, you will progress to creating multiple VBOs for your data, before learning all about Vertex Array Objects and Index Buffer Objects. Finally, you will add code to your newly created Shader class to further control data transfer between the OpenGL application and the shaders_.
+
+### Lesson 10 - Some dreaded math revision
+
+_To prove that math need not be too intimidating, you will do a quick refresher on the mathematical topics that are essential for a graphics course. These topics include trigonometry and linear algebra, where you will further delve the rabbit hole to (re)discover things like vectors and matrices and recap on the three main transformations, namely translation, rotation and scale. Ending the lesson will be  an introduction to GLM, the math helper library designed to work alongside OpenGL._
+
+### Lesson 11 - Lost in transformation I
+
+_For the first part of this double feature, you will be introduced to the three main OpenGL and GLSL types of transformations, namely the modelling, viewing and projection transformations. You will focus predominantly on the first two and build classes to encapsulate their functionality._
+
+### Lesson 12 - Lost in transformation II
+
+_For part deux, you continue down the exciting road that is transformations by learning about perspective division, the depth buffer, and viewports, and end off finding out about the two main projections, namely orthographic and perspective views, and how they will come into play in your 3D application._ 
+
