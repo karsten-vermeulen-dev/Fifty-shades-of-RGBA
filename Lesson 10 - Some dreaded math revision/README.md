@@ -1,3 +1,3 @@
-# Xtra
+# Lesson incoming
 
-A collection of random draft lessons, articles, code samples and extras that haven't developed into fully matured lessons yet.  
+_Another great lesson with loads of information and source code will be here soon..._
