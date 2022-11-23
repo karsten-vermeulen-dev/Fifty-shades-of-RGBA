@@ -13,28 +13,28 @@ _This will be a solid introduction to graphics and shaders, where you will learn
 
 ### Lesson 3 - Window to the 3D world
 
-_In this lesson, students will learn how to download and link the SDL library, which will aid them in creating and managing their application window. Students will add specific SDL code to their projects to create the main window as well as create the OpenGL rendering context. Finally, a main application loop will be added, wherein students will add some primitive OpenGL functions just to get a basic quad to render on screen_.
+_In this lesson, you will learn how to download and link the SDL library, which will aid you in creating and managing your application window. You will also add specific SDL code to your projects to create the main window as well as create the OpenGL rendering context. Finally, a main application loop will be added, wherein you will add some primitive OpenGL functions just to get a basic quad to render on screen_.
 
 ### Lesson 4 - Gimme some input
 
-_Here, students will learn how the input polling process works and how different input events are triggered and dealt with. They will gain insight into reading keyboard and mouse input_.
+_Here, you are going to learn how the input polling process works and how different input events are triggered and dealt with. You will gain insight into reading keyboard and mouse input_.
 
 ### Lesson 5 - Start your graphics engines!
 
-_This is where you will learn all about game engines with the intention to create your own graphics engine from scratch. The Singleton Design Pattern will be taught and used from this point forth to create manager objects for your engine. We will begin creating managers to encapsulate all of our screen and input functionality_.
+_This is where you will learn all about game engines with the intention to create your own graphics engine from scratch. The Singleton Design Pattern will be taught and used from this point forth to create manager objects for your engine. You will begin creating managers to encapsulate all of your screen and input functionality_.
 
 ### Lesson 6 - _OpenGL_...opened up
 
-_We continue building upon our small graphics engine and learn all about extension functionality in OpenGL. We will learn the difficult method of manually loading extension functions from the graphics driver, as well as the simpler method using the GLAD 2.0 library. Finally, we are going to learn about some debugging techniques that we can utilize in OpenGL_. 
+_Continuing building upon your small graphics engine, you are going to learn all about extension functionality in OpenGL, particularly the difficult method of manually loading extension functions from the graphics driver, as well as the simpler method of using the GLAD 2.0 library. Finally, you are going to learn about some debugging techniques that can be effectively utilized in OpenGL_. 
 
 ### Lesson 7 - The graphics pipeline
 
-_In this lesson, we are going to delve into the graphics pipeline and gain a deeper understanding of vertex and fragment shaders, ending off with a good knowledge of GLSL_.
+_In this lesson, you will be delving into the graphics pipeline and gain a deeper understanding of vertex and fragment shaders, ending off with a good knowledge of GLSL_.
 
 ### Lesson 8 - Sending data down the pipeline I
 
-_Here, we will learn how to pass data to our shaders, in the form of uniforms, vertex attributes and Vertex Buffer Objects. We will start by creating a single VBO to store and pass to the shader all of our position and color data for a simple shape_. 
+_Here, you will learn how to pass data to your shaders, in the form of uniforms, vertex attributes and Vertex Buffer Objects. You will start by creating a single VBO to store and pass to the shader all of your position and color data for a simple shape_. 
 
 ### Lesson 9 - Sending data down the pipeline II
 
-_Now, we progress to creating multiple VBOs for our data, before learning all about Vertex Array Objects and Index Buffer Objects. Finally, we will add code to our newly created Shader class to further control data management between the OpenGL application and the shaders_.
+_Now, you will progress to creating multiple VBOs for your data, before learning all about Vertex Array Objects and Index Buffer Objects. Finally, you will add code to your newly created Shader class to further control data transfer between the OpenGL application and the shaders_.
