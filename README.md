@@ -51,3 +51,13 @@ _For the first part of this double feature, you will be introduced to the three 
 
 _For part deux, you continue down the exciting road that is transformations by learning about perspective division, the depth buffer, and viewports, and end off finding out about the two main projections, namely orthographic and perspective views, and how they will come into play in your 3D application._ 
 
+### Lesson 13 - Creating a 3D world
+
+_In this lesson, you will begin to create your own 3D game world and build a grid and coordinate system, so that you can better orientate yourself. Together with a working camera, some objects in the scene and the ability to switch between 2D and 3D, you should be well on your way to producing an exciting graphics tech demo._
+
+### Lesson 14 - Adding some textures to the dish
+
+_With the time now ripe for textures to be added to your objects, in this lesson you will build a Texture class to handle the loading, unloading, storing and filtering of textures. You will learn all about UV coordinates and how you can pass this data, using VBOs, to the shader, as well as demonstrate how to use the textures in the shaders. 
+And because one texture simply isn’t enough, you will also learn about multi-texturing._  
+
+
