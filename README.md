@@ -60,4 +60,26 @@ _In this lesson, you will begin to create your own 3D game world and build a gri
 _With the time now ripe for textures to be added to your objects, in this lesson you will build a Texture class to handle the loading, unloading, storing and filtering of textures. You will learn all about UV coordinates and how you can pass this data, using VBOs, to the shader, as well as demonstrate how to use the textures in the shaders. 
 And because one texture simply isn’t enough, you will also learn about multi-texturing._  
 
+### Lesson 15 - It's too dimensional
 
+_Stepping away from 3D for a short while, you will now delve a little into the world of 2D and learn how to map your UV coordinates to a simple quad to turn it into a sprite. From there, you will create some basic 2D animations and blend them with your 3D world to create a more aesthetically pleasing environment._
+
+### Lesson 16 - The writing's on the screen
+
+_Text rendering is equally important to know about, so today, you will cover how to create text on screen, by using bitmapped fonts before delving into the FreeType library. You will end off the lesson building a Text class to encapsulate all text rendering functionality._
+
+### Lesson 17 - Let there be lights I
+
+_It's time to add some color and light to your scene and the next four lessons will be dedicated to just that. Starting you off, you will begin with a brief overview of colors and learn about different color models, color mixing and how they are used in real life as well as digitally._
+
+### Lesson 18 - Let there be lights II
+
+_In this lesson, you will learn how lighting can be broken down into the ambient, diffuse and specular lighting model. You will further discover the concept of a light source, the object being lit, and the viewer, and build lighting algorithms in your vertex shader. Thereafter, you will continue learning about lights and delve into per-fragment lighting, which will make your objects and scene look a whole lot better._
+
+### Lesson 19 - Let there be lights III
+
+_With a plethora of lighting knowledge under your belt and a robust lighting system built into your engine, you will now cover everything there is to know about normals and how a normal matrix can make a difference with rotated objects being lit._
+
+### Lesson 20 - Let there be more lights
+
+_Here, you conclude your lessons of lighting by learning how to create multiple lights, as well as different types of lighting such as spot, point and directional lights._
