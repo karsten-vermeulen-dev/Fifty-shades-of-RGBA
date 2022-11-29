@@ -67,6 +67,12 @@ This is the modern and current method of creating 3D applications and games with
 
 ### It has to be in context
 
+Before making use of _OpenGL_, it has to be set to a certain state or context. 
+
+- _**Core Profile**_ - This context only enables the modern core from **3.3** onwards up until the current version **4.6**. No _Legacy OpenGL_ functionality is supported
+- _**Compatibility Profile**_ - This context supports the older fixed function pipeline, and gives developers access to the older and newer functionalities of the API
+
+💡 _OpenGL cannot create its own context, nor can it create a window to render in, which is why applications such as SDL, SFML, GLFW, freeglut, etc. are used to perform such tasks_
 
 <hr>
 
