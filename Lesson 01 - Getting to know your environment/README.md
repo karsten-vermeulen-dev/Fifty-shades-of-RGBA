@@ -30,7 +30,7 @@ On _Windows_ systems, the _OpenGL_ application will generally load the _opengl32
 
 💡 _The latest cards will have support for Vulkan_.
 
-### Ye olde Fixed Function Pipeline
+### Ye olde fixed function pipeline
 
 This is a set of predefined functionality that was used in the early days of _OpenGL_ to create 3D applications and was used in older versions of _OpenGL_, up until version **3.0**, and is now known as _Legacy OpenGL_. _OpenGL_ had a set way of doing things via these statically pre-defined routines and developers had little freedom in terms of rendering. The CPU was predominantly used for all draw calls and calculations.
 
@@ -46,6 +46,27 @@ This is a set of predefined functionality that was used in the early days of _Op
 | _OpenGL 1.5_  | 2003 | Introduced the vertex buffer object |
 | _OpenGL 2.0_  | 2004 | Introduced the GLSL shader language |
 | _OpenGL 2.1_  | 2006 | The last release before the API was modernized |
+
+### The shiny, new programmable pipeline
+
+This is the modern and current method of creating 3D applications and games with _OpenGL_ and offers more control, flexibility and power than the fixed function alternative. From version **3.0** onwards, the use of _shaders_, particularly vertex and fragment shaders, became more predominant. Here, the GPU is predominantly used for all draw calls and calculations. _OpenGL 3.0_ saw the beginning of the _Deprecation Model_, where parts of the core API were removed, and the API could be set in either of two contexts, ie a _backward-compatible_ or _forward compatible_ context. 
+
+| OpenGL version  | Release date | Notes |
+| ------------- | ------------- | ------------- |
+| _OpenGL 3.0_  | 2008 | The initial release of the modern API |
+| _OpenGL 3.1_  | 2009 |  |
+| _OpenGL 3.2_  | 2009 | Introduced core & compatibility contexts |
+| _OpenGL 3.3_  | 2010 |  |
+| _OpenGL 4.0_  | 2010 |  |
+| _OpenGL 4.1_  | 2010 |  |
+| _OpenGL 4.2_  | 2011 |  |
+| _OpenGL 4.3_  | 2012 |  |
+| _OpenGL 4.4_  | 2013 |  |
+| _OpenGL 4.5_  | 2014 |  |
+| _OpenGL 4.6_  | 2017 | Now with support for SPIR-V shaders |
+
+### It has to be in context
+
 
 <hr>
 
