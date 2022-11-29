@@ -36,6 +36,16 @@ This is a set of predefined functionality that was used in the early days of _Op
 
 💡 _The fixed function pipeline can be good for learning OpenGL as a beginner, but it is recommended to stay away from this form of graphics programming as much as possible_.
 
+| OpenGL version  | Release date | Notes |
+| ------------- | ------------- | ------------- |
+| _OpenGL 1.0_  | 1992 | The initial release of the API |
+| _OpenGL 1.1_  | 1997 | The first update |
+| _OpenGL 1.2_  | 1998 |  |
+| _OpenGL 1.3_  | 2001 |  |
+| _OpenGL 1.4_  | 2002 |  |
+| _OpenGL 1.5_  | 2003 | Introduced the vertex buffer object |
+| _OpenGL 2.0_  | 2004 | Introduced the GLSL shader language |
+| _OpenGL 2.1_  | 2006 | The last release before the API was modernized |
 
 <hr>
 
