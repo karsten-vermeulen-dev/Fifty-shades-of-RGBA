@@ -107,7 +107,19 @@ If there are specific components you wish to install, then simply click on the _
 
 _More tips, tricks & shortcuts coming soon..._
 
+<hr>
+
 ## A good folder structure
 
-_Material coming soon..._
+_More info regarding good folder structures coming soon..._
+
+### Using external libraries
+
+Each external library you download for a _Windows_ environment generally comes with _header_ (**.h**), _static library_ (**.lib**) and _dynamic library_ (**.dll**) files.
+The header files contain all the class and function declarations used during compilation, the static library files contain the functions used during the linking process of the application, and the dynamic library files contain all the functions used during the runtime of the application.
+
+💡 _The DLL files should always be included when the application ships_.
+
+We are going to be needing the assistance of _SDL_ to set up our _OpenGL_ context and applpication window. Head over [HERE](https://github.com/libsdl-org/SDL/releases) to find the latest release of the API. Make sure you select the _SDL2-devel-...-VC.zip_ and download that. Unzip the development files and place them in a folder called _Libraries_, under a sub-folder called _SDL_. <br> 
+Because sometimes the files seem to be all over the place, it's a good suggestion to organise them in a _bin_, _include_ and _lib_ folder. The _bin_ folder should contain all the _runtime files_ (**.dll**), the _include_ folder all the _header files_ (**.h**) and the _lib_ folder the _static library files_ (**.lib**).
 
