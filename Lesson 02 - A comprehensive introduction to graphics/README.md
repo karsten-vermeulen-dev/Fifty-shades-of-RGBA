@@ -54,13 +54,30 @@ That's right, during the 1980s, two-dimensional sprite games were very popular a
 The third dimension was all an illusion really, with cheap hacks and neat tricks used to make things appear 3D, for example, _sprite scaling_, _parallax scrolling_ and advanced _texture mapping_ techniques. _Nintendo_'s _SNES_ came with a special _Mode 7_ chip that ran basic algorithms to transform 2D images in such a way that the worlds appeared to look 3D. <br>
 _id Software_ also created some revolutionary methods to simulate 3D worlds in their games. _Wolfenstein_ used _ray casting_ and _Doom_ used _binary space partitioning_. <br>
 Around the mid-1990s, graphics capabilities were improving dramatically and gamers began to see less software rendering on the CPU and more graphics cards with hardware acceleration. These cards came with a dedicated GPU and were capable of handling more advanced 3D rendering tasks. The _3dfx Voodoo_ card was an early pioneer in the world of full 3D gaming and _Quake III Arena_ was _id Software_'s first true 3D game. The _Nvidia GeForce 256_ was the first card to come with a proper, dedicated graphics processing unit and was marketed as '_The world’s first GPU_'. <br>
-The GPU has come to be more powerful than the CPU because of its parallel processing architecture and even though CPUs today have multiple cores and are able to perform multi-threading, they are still considered to be less adequate than GPUs. 
 
 💡 _If you're interested, why not check out [this interesting video about how fake the old Doom really was](https://www.youtube.com/watch?v=zb6Eo1D6VW8). And once you've watched that, check out this [article about the modern methods of rendering in the 2016 Doom game](http://www.adriancourreges.com/blog/2016/09/09/doom-2016-graphics-study)_
 
+### Modern-day techniques
 
+The GPU has come to be more powerful than the CPU because of its parallel processing architecture and even though CPUs today have multiple cores and are able to perform multi-threading, they are still considered to be less adequate than GPUs. As 3D technology advances, games and applications today can make use of many different shader and rendering techniques such as:
 
+- _**High Dynamic Range Rendering (HDR)**_
+- _**Physically-Based Rendering (PBR)**_
+- _**Ray tracing**_ 
 
+### HDR
+
+_More info on this later_
+
+### PBR
+
+_More info on this later_
+
+### Ray tracing
+
+A hot topic in the world of graphics programming and possibly the future of realistic looking games. It has been used in the film industry for decades but only recently has it been implemented in games. The reason for this is that films and animations are _static_, so to speak, which means we merely watch the movie in front of us without much interaction. This allows film and animation studios to apply complex graphics techniques such as ray tracing into their films and process these on what is called _render farms_. The end product is then presented to the consumer to watch. <br>
+Games are more _dynamic_ because we interact with them more. That means, the game needs to update accordingly every frame, and with complex ray tracing algorithms, this can prove to be very slow if your GPU is not up to the task. Therefore, until recently, we haven't seen much (or any) ray tracing in games. <br>
+The theory behind ray tracing has been around since the 60s and is still being actively researched today. It's extremely computationally expensive and requires dedicated cores to render high resolution games at a decent frame rate. 
 
 <hr>
 
