@@ -48,6 +48,14 @@ The _Super Video Graphics Array_ standard was introduced by _VESA_ and released 
 
 Today, there are so many different resolutions, color palettes, aspect ratios and refresh rates and modern graphics cards and their powerful GPUs are capable of rendering high definition games and applications without a hitch. Current film and gaming resolution trends are _HD_ (1280x720), _Full HD_ (1920x1080) and _4K_ (3840×2160). In the world of graphics cards and chipsets, _Nvidia_, _AMD_ and now also _Intel_ are boasting power-hungry hardware, each year competing to be the best and provide gamers and crypo miners with impressive new hardware releases. Funnily enough, the company colors happen to be red (_AMD_), green (_Nvidia_) and blue (_Intel_), which, when abbreviated, becomes _RGB_. You think they did this on purpose? 
 
+### Hold up, I hear early 3D games were faked
+
+That's right, during the 1980s, two-dimensional sprite games were very popular and were played in abundance on PCs and consoles. At the start of the 90s, they began to fade and the era of 3D gaming evolved, however, full 3D games still took a while to evolve. Just like their fellow sprite games, early 3D games were still being processed and rendered in software with code running on the CPU. <br>
+The third dimension was all an illusion really, with cheap hacks and neat tricks used to make things appear 3D, for example, _sprite scaling_, _parallax scrolling_ and advanced _texture mapping_ techniques. _Nintendo_'s _SNES_ came with a special _Mode 7_ chip that ran basic algorithms to transform 2D images in such a way that the worlds appeared to look 3D. <br>
+_id Software_ also created some revolutionary methods to simulate 3D worlds in their games. _Wolfenstein_ used _ray casting_ and _Doom_ used _binary space partitioning_. 
+If you're interested, why not check out [this interesting video about how fake the old Doom really was](https://www.youtube.com/watch?v=zb6Eo1D6VW8). And once you've watched that, check out this [article about the modern methods of rendering in the 2016 Doom game](http://www.adriancourreges.com/blog/2016/09/09/doom-2016-graphics-study)
+
+
 
 <hr>
 
