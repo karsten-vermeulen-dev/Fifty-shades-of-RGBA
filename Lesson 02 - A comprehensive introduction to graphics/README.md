@@ -44,6 +44,11 @@ In 1987, _IBM_ gave us the _Video Graphics Array_, which could represent 262,144
 
 The _Super Video Graphics Array_ standard was introduced by _VESA_ and released in 1989 as an extension to _IBM_'s _VGA_ display standard. Originally defined to render 16 colors in a 800x600 resolution, it soon evolved to start rendering 256 (and more) colors in much higher resolutions. This standard marked the start of modern-day graphics standards that we see today.
 
+### Modern-day graphics
+
+Today, there are so many different resolutions, color palettes, aspect ratios and refresh rates and modern graphics cards and their powerful GPUs are capable of rendering high definition games and applications without a hitch. Current film and gaming resolution trends are _HD_ (1280x720), _Full HD_ (1920x1080) and _4K_ (3840×2160). In the world of graphics cards and chipsets, _Nvidia_, _AMD_ and now also _Intel_ are boasting power-hungry hardware, each year competing to be the best and provide gamers and crypo miners with impressive new hardware releases. Funnily enough, the company colors happen to be red (_AMD_), green (_Nvidia_) and blue (_Intel_), which, when abbreviated, becomes _RGB_. You think they did this on purpose? 
+
+
 <hr>
 
 _More material coming soon..._
