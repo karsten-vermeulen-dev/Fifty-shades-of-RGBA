@@ -15,6 +15,21 @@ The _OpenGL_ specification, as well as other graphics-related information, can b
 
 The _Khronos Group_ is a non-profit consortium that oversees the development of _OpenGL_ and its other APIs. It consists of over 100 companies that help set the graphical standard for _OpenGL_ as well as APIs such as _OpenGL ES_, _WebGL_, _OpenCL_, and the newly formed _OpenXR_ APIs. Their latest API, _Vulkan_, is believed to eventually replace _OpenGL_, but not for a very long time and so, for now, it is being designed to work alongside it.
 
+### The graphics drivers
+
+These are special files stored on the hard drive that communicate with the graphics hardware to perform certain graphical tasks. They essentially _drive_ the graphics card to render game worlds for your game or 3D scenes for your visualization applications. Drivers come in many different forms and file types, more commonly they exist as _.dll_ files on _Windows_ systems. <br>
+Back in the days of early game development, games would ship with their own dedicated graphics driver software along with the game. Each driver file was specific to the game, operating system and graphics hardware. If hardware or operating systems updated, a large amount of game code would need to be changed as well. This was a lot of work! <br>
+During the early 90s a _hardware abstraction layer_ was formed, which took over the graphics responsibilities from the game code such that games could be developed in a less hard-coded format and had direct access to the graphics hardware. These abstraction layers came in the form of _Application Programming Interfaces_ (APIs) such as _OpenGL_, _Direct3D_, _Glide_, _SDL_, etc.
+
+💡 _Each graphics card manufacturer will label their drivers differently_.
+
+### Who's driving the games today
+
+Today, all graphics card manufacturers ship their products with all the relevant drivers. When a game runs, it will access the drivers through the operating system and then communicate directly with the graphics hardware via those drivers. Current technology, such as the newer _Vulkan_ API, are allowing games to skip past the drivers and access the hardware directly. Most graphics cards today have support for _OpenGL_ and _DirectX_. _OpenGL_ drivers ship with the card and _DirectX_ drivers come packaged with the _Windows_ operating system.
+
+💡 _The latest cards will have support for Vulkan_.
+
+
 
 <hr>
 
