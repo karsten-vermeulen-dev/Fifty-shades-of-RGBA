@@ -11,6 +11,10 @@ _OpenGL_ stands for _Open Graphics Library_ and is a low level API that allows g
 All graphics functionality lies inside _**graphics drivers**_, which are written and supplied by the hardware vendor. Programs made with _OpenGL_ will communicate with these drivers accordingly. In the past, when 3D graphics were less sophisticated, _OpenGL_ offered programmers a _**fixed function pipeline**_, which was merely a specific set of pre-defined graphics routines. Today, the _**programmable pipeline**_ is used, where developers have more control on how their objects are rendered and used within an _OpenGL_ environment. <br>
 The _OpenGL_ specification, as well as other graphics-related information, can be found [HERE](https://www.opengl.org)
 
+### Who are these _Khronos_ people?
+
+The _Khronos Group_ is a non-profit consortium that oversees the development of _OpenGL_ and its other APIs. It consists of over 100 companies that help set the graphical standard for _OpenGL_ as well as APIs such as _OpenGL ES_, _WebGL_, _OpenCL_, and the newly formed _OpenXR_ APIs. Their latest API, _Vulkan_, is believed to eventually replace _OpenGL_, but not for a very long time and so, for now, it is being designed to work alongside it.
+
 
 <hr>
 
