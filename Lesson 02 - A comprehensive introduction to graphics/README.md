@@ -52,8 +52,13 @@ Today, there are so many different resolutions, color palettes, aspect ratios an
 
 That's right, during the 1980s, two-dimensional sprite games were very popular and were played in abundance on PCs and consoles. At the start of the 90s, they began to fade and the era of 3D gaming evolved, however, full 3D games still took a while to evolve. Just like their fellow sprite games, early 3D games were still being processed and rendered in software with code running on the CPU. <br>
 The third dimension was all an illusion really, with cheap hacks and neat tricks used to make things appear 3D, for example, _sprite scaling_, _parallax scrolling_ and advanced _texture mapping_ techniques. _Nintendo_'s _SNES_ came with a special _Mode 7_ chip that ran basic algorithms to transform 2D images in such a way that the worlds appeared to look 3D. <br>
-_id Software_ also created some revolutionary methods to simulate 3D worlds in their games. _Wolfenstein_ used _ray casting_ and _Doom_ used _binary space partitioning_. 
-If you're interested, why not check out [this interesting video about how fake the old Doom really was](https://www.youtube.com/watch?v=zb6Eo1D6VW8). And once you've watched that, check out this [article about the modern methods of rendering in the 2016 Doom game](http://www.adriancourreges.com/blog/2016/09/09/doom-2016-graphics-study)
+_id Software_ also created some revolutionary methods to simulate 3D worlds in their games. _Wolfenstein_ used _ray casting_ and _Doom_ used _binary space partitioning_. <br>
+Around the mid-1990s, graphics capabilities were improving dramatically and gamers began to see less software rendering on the CPU and more graphics cards with hardware acceleration. These cards came with a dedicated GPU and were capable of handling more advanced 3D rendering tasks. The _3dfx Voodoo_ card was an early pioneer in the world of full 3D gaming and _Quake III Arena_ was _id Software_'s first true 3D game. The _Nvidia GeForce 256_ was the first card to come with a proper, dedicated graphics processing unit and was marketed as '_The world’s first GPU_'. <br>
+The GPU has come to be more powerful than the CPU because of its parallel processing architecture and even though CPUs today have multiple cores and are able to perform multi-threading, they are still considered to be less adequate than GPUs. 
+
+💡 _If you're interested, why not check out [this interesting video about how fake the old Doom really was](https://www.youtube.com/watch?v=zb6Eo1D6VW8). And once you've watched that, check out this [article about the modern methods of rendering in the 2016 Doom game](http://www.adriancourreges.com/blog/2016/09/09/doom-2016-graphics-study)_
+
+
 
 
 
