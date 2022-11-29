@@ -59,11 +59,12 @@ Around the mid-1990s, graphics capabilities were improving dramatically and game
 
 ### Modern-day techniques
 
-The GPU has come to be more powerful than the CPU because of its parallel processing architecture and even though CPUs today have multiple cores and are able to perform multi-threading, they are still considered to be less adequate than GPUs. As 3D technology advances, games and applications today can make use of many different shader and rendering techniques such as:
+The GPU has come to be more powerful than the CPU because of its parallel processing architecture and even though CPUs today have multiple cores and are able to perform multi-threading, they are still considered to be less adequate than GPUs. As 3D technology advances, games and applications today can make use of many different shader and rendering techniques as well as advanced computations such as:
 
 - _**High Dynamic Range Rendering (HDR)**_
 - _**Physically-Based Rendering (PBR)**_
 - _**Ray tracing**_ 
+- _**GPGPU**_
 
 ### HDR
 
@@ -77,10 +78,14 @@ _More info on this later_
 
 A hot topic in the world of graphics programming and possibly the future of realistic looking games. It has been used in the film industry for decades but only recently has it been implemented in games. The reason for this is that films and animations are _static_, so to speak, which means we merely watch the movie in front of us without much interaction. This allows film and animation studios to apply complex graphics techniques such as ray tracing into their films and process these on what is called _render farms_. The end product is then presented to the consumer to watch. <br>
 Games are more _dynamic_ because we interact with them more. That means, the game needs to update accordingly every frame, and with complex ray tracing algorithms, this can prove to be very slow if your GPU is not up to the task. Therefore, until recently, we haven't seen much (or any) ray tracing in games. <br>
-The theory behind ray tracing has been around since the 60s and is still being actively researched today. It's extremely computationally expensive and requires dedicated cores to render high resolution games at a decent frame rate. 
+The theory behind ray tracing has been around since the 60s and is still being actively researched today. It's extremely computationally expensive and requires dedicated cores to render high resolution games at a decent frame rate. <br>
 So, how does it work? Well, it calculates lighting in a scene using rays that are cast from the viewer to the objects in the world to determine intersections and subsequent pixel color. The current form of real-time rendering has always been _rasterization_ which can look very good but never as photo-realistic as ray tracing. 
 
 💡 _If you're interested, check out this [interesting article on how Control implements ray-tracing](https://www.pcgamer.com/uk/control-is-the-best-most-complex-implementation-of-ray-tracing-in-a-game-so-far)_
+
+### GPGPU
+
+Contrary to popular belief, modern GPUs aren't solely used for rendering advanced graphics but also for what is known as _General-purpose computing on graphics processing units_, or _GPGPU_ for short. This mouthful of a name refers to the GPU being used to run complex computations that aren't graphics related, such as _physics simulations_ or _bitcoin mining_.
 
 <hr>
 
