@@ -23,12 +23,18 @@ During the early 90s a _hardware abstraction layer_ was formed, which took over 
 
 💡 _Each graphics card manufacturer will label their drivers differently_.
 
-### Who's driving the games today
+### Who's driving the games today?
 
-Today, all graphics card manufacturers ship their products with all the relevant drivers. When a game runs, it will access the drivers through the operating system and then communicate directly with the graphics hardware via those drivers. Current technology, such as the newer _Vulkan_ API, are allowing games to skip past the drivers and access the hardware directly. Most graphics cards today have support for _OpenGL_ and _DirectX_. _OpenGL_ drivers ship with the card and _DirectX_ drivers come packaged with the _Windows_ operating system.
+Today, all graphics card manufacturers ship their products with all the relevant drivers. When a game runs, it will access the drivers through the operating system and then communicate directly with the graphics hardware via those drivers. Current technology, such as the newer _Vulkan_ API, are allowing games to skip past the drivers and access the hardware directly. Most graphics cards today have support for _OpenGL_ and _DirectX_. _OpenGL_ drivers ship with the card and _DirectX_ drivers come packaged with the _Windows_ operating system. <br>
+On _Windows_ systems, the _OpenGL_ application will generally load the _opengl32.dll_ file into memory, which in turn searches for the graphics card drivers that contain code that is invoked by the application, allowing the game to communicate with the graphics card.
 
 💡 _The latest cards will have support for Vulkan_.
 
+### Ye olde Fixed Function Pipeline
+
+This is a set of predefined functionality that was used in the early days of _OpenGL_ to create 3D applications and was used in older versions of _OpenGL_, up until version **3.0**, and is now known as _Legacy OpenGL_. _OpenGL_ had a set way of doing things via these statically pre-defined routines and developers had little freedom in terms of rendering. The CPU was predominantly used for all draw calls and calculations.
+
+💡 _The fixed function pipeline can be good for learning OpenGL as a beginner, but it is recommended to stay away from this form of graphics programming as much as possible_.
 
 
 <hr>
