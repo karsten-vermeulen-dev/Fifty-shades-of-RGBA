@@ -2,12 +2,15 @@
 
 ## The _Open Graphics Library_
 
-### What is OpenGL?
+### What is _OpenGL_?
 
 _OpenGL_ stands for _Open Graphics Library_ and is a low level API that allows graphics programmers a way of 'talking' to the graphics card. It was released in 1992 by _Silicon Graphics_ and used to fall under the _OpenGL Architecture Review Board_, or _ARB_, but now belongs to the _Khronos Group_. Being a cross platform API, it can run on _Windows_, _Linux_ and, until recently, _macOS_ and is used for making games, simulations and 3D visualization applications. _OpenGL_ is not a software package, or SDK, but rather a graphics standard or implementation limited only by your graphics card and operating system. 
 
+💡 _The Open in OpenGL refers to it being an open standard instead of open-source_
 
-Note: The Open in OpenGL refers to it being an open standard instead of open-source
+All graphics functionality lies inside _**graphics drivers**_, which are written and supplied by the hardware vendor. Programs made with _OpenGL_ will communicate with these drivers accordingly. In the past, when 3D graphics were less sophisticated, _OpenGL_ offered programmers a _**fixed function pipeline**_, which was merely a specific set of pre-defined graphics routines. Today, the _**programmable pipeline**_ is used, where developers have more control on how their objects are rendered and used within an _OpenGL_ environment. <br>
+The _OpenGL_ specification, as well as other graphics-related information, can be found [HERE](https://www.opengl.org)
+
 
 <hr>
 
