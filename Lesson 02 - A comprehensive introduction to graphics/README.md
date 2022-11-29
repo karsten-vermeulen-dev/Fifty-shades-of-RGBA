@@ -87,6 +87,22 @@ So, how does it work? Well, it calculates lighting in a scene using rays that ar
 
 Contrary to popular belief, modern GPUs aren't solely used for rendering advanced graphics but also for what is known as _General-purpose computing on graphics processing units_, or _GPGPU_ for short. This mouthful of a name refers to the GPU being used to run complex computations that aren't graphics related, such as _physics simulations_ or _bitcoin mining_.
 
-<hr>
+### Some popular graphics APIs (just FYI)
 
-_More material coming soon..._
+Before we end off this lesson, let's take a look at some alternative graphics APIs. 
+
+- _**OpenGL ES**_ - The _Open Graphics Library for Embedded Systems_, released in 2003, is a subset of _OpenGL_ and was designed to help render graphics on smartphones, tablets, PDAs, etc.
+- _**WebGL**_ - The _Web Graphics Library_ was released in 2011 and is another product from the _Khronos Group_ that allows 2D and 3D rendering directly in the web browser, using the GPU and removing the need for plug-ins.
+- _**OpenXR**_ - This is a new standard for virtual and augmented reality.
+- _**Direct3D**_ - Part of the _DirectX_ package, this API was first released in 1996 by _Microsoft_ and is a strong competitor to _OpenGL_. It is designed to render graphics on all _Windows_ machines and _Xbox_ consoles, making it less flexible than _OpenGL_.    
+- _**Vulkan**_ - Released in 2016, this API is built upon _AMD_'s _Mantle_ API and is the 'successor' to _Khronos_' existing _OpenGL_ API.
+- _**Metal**_ - Released in 2014 by _Apple Inc_., this is another competitor to _OpenGL_ and _Direct3D_. 
+
+### ...and some popular graphics hardware manufacturers
+
+- _**IBM**_ - Short for _International Business Machines_ and founded in 1911, this company set the initial standards for graphics displays and released many early desktop PC graphics cards.
+- _**AMD**_ - _Advanced Micro Devices_ was founded in 1969 and is famous for its _Radeon_ series of graphics cards. Its CPU rival is _Intel_ and its GPU rival is _Nvidia_. 
+- _**ATI**_ - Short for _Array Technology Inc_., this company was founded in 1985 and was known for their _Mach_ and _Rage_ series of graphics cards. They were bought out by _AMD_ in 2006.
+- _**Nvidia**_ - Founded in 1993, this mega company is famous for its _GeForce_ series of graphics cards.
+- _**3dfx**_ - Famous for its _Voodoo_ series of graphics cards, this company was founded in 1994 but went bankrupt in 2002, after which it was bought out by _Nvidia_.
+
