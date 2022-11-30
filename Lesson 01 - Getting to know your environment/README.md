@@ -117,9 +117,9 @@ Click [HERE](https://www.libsdl.org) for more information about _SDL_.
 
 <hr>
 
-## A good folder structure
+## Layout of our _Visual Studio_ project
 
-_More info regarding good folder structures coming soon..._
+_More info coming soon..._
 
 ### Using external libraries
 
