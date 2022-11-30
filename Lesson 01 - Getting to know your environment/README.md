@@ -111,7 +111,9 @@ _More tips, tricks & shortcuts coming soon..._
 
 ## The _Simple DirectMedia Layer_ library
 
-_More on this third-party library and why we are using it coming soon..._
+The _Simple DirectMedia Layer_, or _SDL_, library is a cross-platform software development library that allows programmers to utilize its tools to render 2D images on screen. Beyond that, it is also capable of creating and managing game windows, input control, and has image, audio and networking capabilities as well. Our interest in the API is only for the window management and input, since _OpenGL_ cannot create or manage an application window, neither can it manage any input control. Moreover, we will need _SDL_ to work together with _OpenGL_ to create and manage what is known as an _OpenGL context_. <br>
+
+Click [HERE](https://www.libsdl.org) for more information about _SDL_.
 
 <hr>
 
