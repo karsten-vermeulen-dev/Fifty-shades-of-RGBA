@@ -72,7 +72,13 @@ Before making use of _OpenGL_, it has to be set to a certain state or context.
 - _**Core Profile**_ - This context only enables the modern core from **3.3** onwards up until the current version **4.6**. No _Legacy OpenGL_ functionality is supported
 - _**Compatibility Profile**_ - This context supports the older fixed function pipeline, and gives developers access to the older and newer functionalities of the API
 
-💡 _OpenGL cannot create its own context, nor can it create a window to render in, which is why applications such as SDL, SFML, GLFW, freeglut, etc. are used to perform such tasks_
+<hr>
+
+## The _Simple DirectMedia Layer_ library
+
+_OpenGL_ cannot create its own context, nor can it create a window to render in, which is why we require the help of another library, namely the _SDL_ library. _SDL_ stands for _Simple DirectMedia Layer_ and is a cross-platform software development library that allows programmers to utilize its tools to render 2D images on screen. Beyond that, it is also capable of creating and managing game windows, can manage input control, and it has audio and networking capabilities as well. Our interest in the API is initially only for the window management and context creation. Later on, we will require _SDL_ to help us manage the keyboard and mouse inputs, since _OpenGL_ cannot do this either.
+
+Click [HERE](https://www.libsdl.org) for more information about _SDL_.
 
 <hr>
 
@@ -106,14 +112,6 @@ If there are specific components you wish to install, then simply click on the _
 | ALT-mouse drag | This will allow you to select rectangular blocks of code |
 
 _More tips, tricks & shortcuts coming soon..._
-
-<hr>
-
-## The _Simple DirectMedia Layer_ library
-
-The _Simple DirectMedia Layer_, or _SDL_, library is a cross-platform software development library that allows programmers to utilize its tools to render 2D images on screen. Beyond that, it is also capable of creating and managing game windows, input control, and has image, audio and networking capabilities as well. Our interest in the API is only for the window management and input, since _OpenGL_ cannot create or manage an application window, neither can it manage any input control. Moreover, we will need _SDL_ to work together with _OpenGL_ to create and manage what is known as an _OpenGL context_. <br>
-
-Click [HERE](https://www.libsdl.org) for more information about _SDL_.
 
 <hr>
 
