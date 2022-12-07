@@ -65,6 +65,23 @@ Another attribute that needs to be set is the option to add _double buffering_, 
 SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 ```
 
+The next attribute that needs setting is the _OpenGL_ context we wish to use. This can be set to either a _core_ or _compatibility_ context. Set your context to a _core_ context if you don't want to allow any _legacy OpenGL_ code to run. Otherwise, set it to _compatibility_ mode, which we will also do so that we can initially run some older code to get things started up.
 
+```cpp
+//Set a core OpenGL context
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
+//Set a compatibility OpenGL context
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);  
+```
 
+Next, we will set the _OpenGL_ version we wish to use within this context. Now this all depends on what kind of graphics card and drivers your system has. Let's set it to the latest version of **4.6**, but if this fails later on, come back here and try an earlier version. 
+
+```cpp
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 6);
+```
+ 
+### Creating the application window and _OpenGL_ context
+
+_More material coming soon!_
