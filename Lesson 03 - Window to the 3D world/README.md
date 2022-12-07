@@ -35,3 +35,36 @@ if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 ```
 
 💡 _You don't have to initialize the entire SDL system, you could also initialize individual components. Be sure to check out the SDL wiki for more info_.
+
+Next, we will need to declare two variables required to create our _SDL_ application window and a handy _OpenGL_ context:
+
+```cpp
+SDL_Window* window;
+SDL_GLContext context;
+```
+
+_OpenGL_ and _SDL_ work really well together in that individual attributes can be set using the _SDL_GL_SetAttribute()_ routine. This function will read in the attribute that needs setting and the value to set for that attribute:
+
+```cpp
+SDL_GL_SetAttribute(attribute, value);
+```
+
+The first attributes that need setting are the RGBA buffer sizes and the total frame buffer size, so that we can have at least **32-bit** color:
+
+```cpp
+SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8);
+SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
+SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
+SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
+SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 32);
+```
+
+Another attribute that needs to be set is the option to add _double buffering_, which will ensure that when rendering to the screen, two frame buffers are used, one that displays the actual image, and another that is rendered to behind the scenes. Setting this attribute can be done with a value of either **0** or **1**, to _disable_ or _enable_ double buffering, respectively: 
+
+```cpp
+SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+```
+
+
+
+
