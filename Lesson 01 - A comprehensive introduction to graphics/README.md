@@ -1,6 +1,6 @@
-## Lesson 2 - The evolution of graphics
+# Lesson 1 - A comprehensive introduction to graphics
 
-### Overview 
+## Overview 
 
 Graphics in games have come a long way, from simple graphical overlays to the advanced shader techniques used today. Hardware in the desktop PC and the console has evolved over the last 40 years and even tablets and smartphones have improved dramatically over the last decade and now run some pretty advanced games. The graphics card industry has fought many wars over the years and today _Nvidia_ and _AMD_ (and maybe _Intel_?) battle it out head-to-head to be the best. With the  addition of VR and AR in games, the graphics industry is certainly spanning out in new directions. 
 
