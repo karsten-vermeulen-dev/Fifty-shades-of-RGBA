@@ -1,4 +1,4 @@
-## Lesson 1 - Getting to know your environment
+# Lesson 2 - Getting to know your environment
 
 ## The _Open Graphics Library_
 
@@ -72,11 +72,13 @@ Before making use of _OpenGL_, it has to be set to a certain state or context.
 - _**Core Profile**_ - This context only enables the modern core from **3.3** onwards up until the current version **4.6**. No _Legacy OpenGL_ functionality is supported
 - _**Compatibility Profile**_ - This context supports the older fixed function pipeline, and gives developers access to the older and newer functionalities of the API
 
+_OpenGL_ cannot create its own context, nor can it create a window to render in, which is why we require the help of another library, namely the _SDL_ library. Of course, you may choose to use an alternative, such as _GLFW_, _SFML_ or _freeglut_.
+
 <hr>
 
 ## The _Simple DirectMedia Layer_ library
 
-_OpenGL_ cannot create its own context, nor can it create a window to render in, which is why we require the help of another library, namely the _SDL_ library. _SDL_ stands for _Simple DirectMedia Layer_ and is a cross-platform software development library that allows programmers to utilize its tools to render 2D images on screen. Beyond that, it is also capable of creating and managing game windows, can manage input control, and it has audio and networking capabilities as well. Our interest in the API is initially only for the window management and context creation. Later on, we will require _SDL_ to help us manage the keyboard and mouse inputs, since _OpenGL_ cannot do this either.
+ _SDL_ stands for _Simple DirectMedia Layer_ and is a cross-platform software development library that allows programmers to utilize its tools to render 2D images on screen. Beyond that, it is also capable of creating and managing game windows, managing keyboard and mouse input, and it has audio and networking capabilities as well. Our main interest in the API is initially for the window management and _OpenGL_ context creation. Later on, we will require _SDL_ to help us manage the keyboard and mouse inputs, since _OpenGL_ cannot do this either.
 
 Click [HERE](https://www.libsdl.org) for more information about _SDL_.
 
