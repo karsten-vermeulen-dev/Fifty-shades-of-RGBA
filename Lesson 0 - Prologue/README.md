@@ -1,4 +1,4 @@
-## Lesson 0 - Prologue
+# Lesson 0 - Prologue
 
 ### So, what are we doing?
 
