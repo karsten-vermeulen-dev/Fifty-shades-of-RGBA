@@ -120,11 +120,20 @@ if (!context)
 }
 ```
 
-### ...
+### Round and round we go
 
+After initializing _SDL_ and _OpenGL_, we are going to require some kind of loop that runs until the application ends, after which we will perform some clean-up tasks. Every application or game has some kind of a loop under the hood, and at its core, it will do three things, namely _clear the screen_, _render great things_, and _swap the frame buffers_. To begin, we will require a flag variable, sensibly named _isAppRunning_, that will determine when the loop should end. 
 
+```cpp
+bool isAppRunning { true };
 
+while (isAppRunning)
+{
+    //Do some wonderful things here...
+}
+```
 
+_More material coming soon!_
 
 ### Destroying the window and _OpenGL_ context when we're done with it
 
