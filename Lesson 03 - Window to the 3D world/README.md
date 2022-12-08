@@ -84,4 +84,28 @@ SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 6);
  
 ### Creating the application window and _OpenGL_ context
 
-_More material coming soon!_
+We are now ready to go ahead and create the application window using the _SDL_CreateWindow()_ function, which takes in arguments that relate to the _window title_, its _x_ and _y_ _position_, the _width_ and _height_, or _resolution_ of the window, and a special _flag_ stating what _type of window_ to create. The function returns a pointer to the newly created window or _NULL_ if it failed to create one. We can use this return value to decide whether to continue with initialization or display an error and call it quits.
+
+```cpp
+window = SDL_CreateWindow("Graphics Engine", 
+                          SDL_WINDOWPOS_UNDEFINED, 
+                          SDL_WINDOWPOS_UNDEFINED, 
+                          1280, 720, 
+                          SDL_WINDOW_OPENGL);
+
+if (!window)
+{
+    //Oh well, that's it then, game window could not be created
+}
+```
+
+The window's _x_ and _y_ position can be set manually or with the use of the flags _SDL_WINDOWPOS_UNDEFINED_ or _SDL_WINDOWPOS_CENTERED_. Choose the ideal resolution that you want (we will go with 1280x720, or HD resolution), and state the type of window you want (we are going for a simple _OpenGL_ window). Check the _SDL_ wiki for more information about the window flags and if you want to combine other flag values, you will need to OR the flags together, like so:
+
+```cpp
+window = SDL_CreateWindow("Graphics Engine", 
+                          SDL_WINDOWPOS_UNDEFINED, 
+                          SDL_WINDOWPOS_UNDEFINED, 
+                          1280, 720, 
+                          SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN);
+```
+
