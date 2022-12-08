@@ -109,3 +109,14 @@ window = SDL_CreateWindow("Graphics Engine",
                           SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN);
 ```
 
+We can use the newly created window handle to create the _OpenGL_ context, using the function _SDL_GL_CreateContext_, which takes in the window pointer as an argument and returns a pointer to a valid context or _NULL_ if it failed to create one. This context will now provide us with an _OpenGL_ environment to work within. Think of it like this - in a painter's world, the application window would be their easel and the context the paper they draw on.   
+
+```cpp
+context = SDL_GL_CreateContext(window);
+
+if (!context)
+{
+    //Oh no! No OpenGL context could not be created 
+}
+```
+
