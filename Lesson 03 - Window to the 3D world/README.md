@@ -120,3 +120,20 @@ if (!context)
 }
 ```
 
+### ...
+
+
+
+
+
+### Destroying the window and _OpenGL_ context when we're done with it
+
+It is always good coding practice to close down all systems that were initialized before, and in our case, we can use the three routines _SDL_GL_DeleteContext()_, _SDL_DestroyWindow()_ and _SDL_Quit()_ to free the _OpenGL_ context from memory, destroy the _SDL_ application window and close down all _SDL_ subsystems, respectively.
+
+```cpp
+SDL_GL_DeleteContext(context);
+SDL_DestroyWindow(window);
+SDL_Quit();
+```
+
+
