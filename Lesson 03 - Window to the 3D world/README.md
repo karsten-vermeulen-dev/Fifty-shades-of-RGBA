@@ -116,7 +116,7 @@ context = SDL_GL_CreateContext(window);
 
 if (!context)
 {
-    //Oh no! No OpenGL context could not be created 
+    //Oh no! No OpenGL context could be created 
 }
 ```
 
