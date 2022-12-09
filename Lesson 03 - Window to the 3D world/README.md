@@ -141,7 +141,7 @@ while (isAppRunning)
 }
 ```
 
-The part where we render wonderful geometry deserves extra atention. We are going to use some older fixed function code to render a simple quad on our screen. The quad will have four corner vertices and four colors. We will use a simple _glBegin()_ and _glEnd()_ block of code to create the shape, like so:
+The part where we render wonderful geometry deserves extra attention. We are going to use some older fixed function code to render a simple quad on our screen. The quad will have four corner vertices and four colors. We will use a simple _glBegin()_ and _glEnd()_ block of code to create the shape, like so:
 
 ```cpp
 glBegin(GL_QUADS);
@@ -165,6 +165,9 @@ glBegin(GL_QUADS);
 glEnd();
 ```
 
+What the above code will do is render a quad on the screen. For each corner vertex, we need to specify the vertex position and its color, using _glVertex3f()_ and _glColor3f()_, respectively. The '3f' means three floating point values. The vertices are all in normalized device coordinate space, meaning within an xy plane that spans between -1 and 1 in either direction. By default, this is what _OpenGL_ provides us with when we begin to render anything on screen. The vertices are bundled as _xyz_ coordinates and the colors are _rgb_ values.  
+
+💡 _The older fixed function pipeline code above is only being used to quickly render something on-screen. After some brief rendering demonstrations, we are going to steer clear of any other legacy OpenGL code_.
 
 ### Destroying the window and _OpenGL_ context when we're done with it
 
