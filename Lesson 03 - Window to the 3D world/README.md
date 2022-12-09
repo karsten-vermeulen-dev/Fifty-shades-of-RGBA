@@ -122,18 +122,49 @@ if (!context)
 
 ### Round and round we go
 
-After initializing _SDL_ and _OpenGL_, we are going to require some kind of loop that runs until the application ends, after which we will perform some clean-up tasks. Every application or game has some kind of a loop under the hood, and at its core, it will do three things, namely _clear the screen_, _render great things_, and _swap the frame buffers_. To begin, we will require a flag variable, sensibly named _isAppRunning_, that will determine when the loop should end. 
+After initializing _SDL_ and _OpenGL_, we are going to require some kind of loop that runs until the application ends, after which we will perform some clean-up tasks. Every application or game has some kind of a loop under the hood, which is responsible for repetitively updating various core systems as well as doing the main render calls. For example, a game loop would update the input system, physics components, and perhaps some kind of audio sub-system. An application may not have all of those components but it would also need to update the input system and perform some kind of render calls. In our case, we are going to require a loop to clear our screen, render some stuff, and swap the frame buffer. <br>
+To begin, we will require a flag variable, sensibly named _isAppRunning_, that will determine when the loop should end. To clear the frame buffer, we will use the _OpenGL_ function _glClear()_ and to swap the frame buffers, we will use the function _SDL_GL_SwapWindow_. 
 
 ```cpp
 bool isAppRunning { true };
 
 while (isAppRunning)
 {
-    //Do some wonderful things here...
+    //Clear the frame buffer
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    //Render wonderful geometry
+    //..
+    
+    //Swap the frame buffer
+    SDL_GL_SwapWindow(window);
 }
 ```
 
-_More material coming soon!_
+The part where we render wonderful geometry deserves extra atention. We are going to use some older fixed function code to render a simple quad on our screen. The quad will have four corner vertices and four colors. We will use a simple _glBegin()_ and _glEnd()_ block of code to create the shape, like so:
+
+```cpp
+glBegin(GL_QUADS);
+
+    //Top left color and vertex of quad
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex3f(-0.5f, 0.5f, 0.0f);
+
+    //Top right color and vertex of quad
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex3f(0.5f, 0.5f, 0.0f);
+
+    //Bottom right color and vertex of quad
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(0.5f, -0.5f, 0.0f);
+
+    //Bottom left color and vertex of quad
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(-0.5f, -0.5f, 0.0f);
+    
+glEnd();
+```
+
 
 ### Destroying the window and _OpenGL_ context when we're done with it
 
